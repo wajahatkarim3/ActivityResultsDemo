@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     private val askMultiplePermissions = prepareCall(ActivityResultContracts.RequestPermissions()) {map ->
         for (entry in map.entries)
         {
-            Log.w("PERM", "${entry.key} = ${entry.value}")
+            Toast.makeText(this, "${entry.key} = ${entry.value}", Toast.LENGTH_SHORT).show()
         }
     }
 
