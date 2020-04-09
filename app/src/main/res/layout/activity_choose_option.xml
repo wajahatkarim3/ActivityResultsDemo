@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseOptionActivity"
+    android:padding="15dp">
+
+    <TextView android:id="@+id/lblQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Which Android API You Don't Miss Today?"/>
+
+    <Button android:id="@+id/btnAsyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lblQuestion"
+        android:layout_marginTop="15dp"
+        android:text="Async Task"/>
+
+    <Button android:id="@+id/btnFrgTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsyncTask"
+        android:layout_marginTop="15dp"
+        android:text="Fragment Transaction"/>
+
+    <Button android:id="@+id/btnEclipse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnFrgTransactions"
+        android:layout_marginTop="15dp"
+        android:text="Eclipse"/>
+
+    <Button android:id="@+id/btnCursosrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnEclipse"
+        android:layout_marginTop="15dp"
+        android:text="Cursor and Cursor Adapter"/>
+
+    <Button android:id="@+id/btnEverything"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnCursosrs"
+        android:layout_marginTop="15dp"
+        android:text="Everything"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
