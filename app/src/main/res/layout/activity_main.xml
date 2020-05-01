@@ -57,12 +57,19 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/imgCameraPic"
         android:layout_marginTop="15dp"
-        android:text="Request Permission"/>
+        android:text="Request Location Permission (Single)"/>
+
+    <Button android:id="@+id/btnRequestMultiplePermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnRequestPermission"
+        android:layout_marginTop="15dp"
+        android:text="Request Multiple Permissions"/>
 
     <Button android:id="@+id/btnPickImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btnRequestPermission"
+        app:layout_constraintTop_toBottomOf="@+id/btnRequestMultiplePermission"
         android:layout_marginTop="15dp"
         android:text="Pick Images"/>
 

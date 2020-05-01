@@ -47,14 +47,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private val takePicture = prepareCall(ActivityResultContracts.TakePicture()) {bitmap ->
+    private val takePicture = registerForActivityResult(ActivityResultContracts.TakePicture()) {bitmap ->
         bitmap?.let {
             bi.imgCameraPic.setImageBitmap(it)
             bi.imgCameraPic.visibility = View.VISIBLE
         }
     }
 
-    private val askLocationPermission = prepareCall(ActivityResultContracts.RequestPermission()) { result ->
+    private val askLocationPermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) { result ->
         if(result){
             Log.e("TAG", "permnission granted")
         }else{
@@ -62,21 +62,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private val askMultiplePermissions = prepareCall(ActivityResultContracts.RequestPermissions()) {map ->
+    private val askMultiplePermissions = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {map ->
         for (entry in map.entries)
         {
             Toast.makeText(this, "${entry.key} = ${entry.value}", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private val pickImages = prepareCall(ActivityResultContracts.GetContent()) {uri ->
+    private val pickImages = registerForActivityResult(ActivityResultContracts.GetContent()) {uri ->
         uri?.let {uri ->
             bi.imgCameraPic.setImageURI(uri)
             bi.imgCameraPic.visibility = View.VISIBLE
         }
     }
 
-    private val pickApi = prepareCall(ApiPickerActivityContract()) {api ->
+    private val pickApi = registerForActivityResult(ApiPickerActivityContract()) {api ->
         if (api == null)
             Toast.makeText(this, "Nothing selected", Toast.LENGTH_SHORT).show()
         else
