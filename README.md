@@ -2,6 +2,8 @@
 
 A demo project to experiment with new Activity Results API in Android for the article with examples like requesting permissions and camera image capture.
 
+*Article:* https://wajahatkarim.com/2020/05/activity-results-api-onactivityresult/
+
 ![](https://github.com/wajahatkarim3/ActivityResultsDemo/blob/master/screenshots/activity-results-api-demo.gif)
 
 ---
